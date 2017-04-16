@@ -1,0 +1,35 @@
+//
+//  天天微博.pch
+//  天天微博
+//
+//  Created by zxopen06 on 15/10/19.
+//  Copyright © 2015年 zxopen06. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+ZXImage.h"
+
+#define ZXKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define ZXLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define ZXLog(...)
+#endif
+
+/************************cell *********************/
+#define ZXStatusCellMargin  10
+#define ZXStatusNameFront [UIFont systemFontOfSize:13]
+#define ZXStatusTimeFront [UIFont systemFontOfSize:10]
+#define ZXSourceFront     ZXStatusTimeFront
+#define ZXStatusTextFront [UIFont systemFontOfSize:15]
+#define ZXScreenW   [UIScreen mainScreen].bounds.size.width
+
+#endif
